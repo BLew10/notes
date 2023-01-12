@@ -10,6 +10,8 @@ SELECT * FROM employees WHERE salary > 50000;
 SELECT * FROM employees WHERE name LIKE '%John%';
 ```
 - **IN:** This is used to filter results based on a list of values. For example, the following query will return all rows from the "employees" table where the "department" column is either "IT" or "Finance":
+    - Better than having a bunch of "AND"'s
+    - **NOT IN** is the converse and works as well
 ```sql
 SELECT * FROM employees WHERE department IN ('IT', 'Finance');
 ```
