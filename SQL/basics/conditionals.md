@@ -10,11 +10,23 @@ SELECT * FROM employees WHERE salary > 50000;
 SELECT * FROM employees WHERE name LIKE '%John%';
 ```
 - **IN:** This is used to filter results based on a list of values. For example, the following query will return all rows from the "employees" table where the "department" column is either "IT" or "Finance":
-    - Better than having a bunch of "AND"'s
+    - Better than having a bunch of "OR"'s
     - **NOT IN** is the converse and works as well
 ```sql
 SELECT * FROM employees WHERE department IN ('IT', 'Finance');
 ```
+- IN can also be used to connect two tables
+    - The tables arent relational but you can use the result of another query and use it as you condition that needs to be meet
+    - Example:
+
+    ```sql
+    
+    SELECT * FROM exercise_logs WHERE type IN (SELECT type FROM drs_favorites);
+
+    /* This will return the types that exists within the doctor's table and return those. Say it return 'biking and running' as the types. The query above then actually reads as follows*/
+
+    SELECT * FROM exercise_logs WHERE type IN ('biking', 'running');
+    ```
 
 - **BETWEEN:** This is used to filter results based on a range of values. For example, the following query will return all rows from the "employees" table where the "salary" column is between 30000 and 40000:
 ```sql
