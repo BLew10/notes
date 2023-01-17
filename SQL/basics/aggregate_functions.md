@@ -1,4 +1,4 @@
-# Aggregate Functions Used With Group By
+# Aggregate Functions
 
 - **`COUNT:`** This operation returns the number of rows in a table that match a specific condition. The basic syntax is `SELECT COUNT(*) FROM table_name`, which will return the total number of rows in the specified table. If you want to count the number of rows that match a specific condition, you can use the WHERE clause in the SELECT statement, like this:
 ```sql
