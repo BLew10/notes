@@ -54,3 +54,13 @@ foreach(ILayEggs e in canLayEggs)
     e.LayEggs();
 }
 ```
+
+## Difference between a Parent Class and Interface
+- A parent class and an interface in C# have some similarities, but they serve different purposes and have some key differences:
+
+- A parent class, also known as a base class or superclass, is a class from which other classes can inherit properties and methods. A class can only inherit from one parent class, but it can implement multiple interfaces.
+- An interface defines a contract for a class, specifying a set of methods, properties, and events that a class must implement. It does not provide any implementation details, only the signatures of the members.
+- A class can inherit the implementation of the members from its parent class, but it must provide its own implementation for the members of the interface.
+- A parent class can have a constructor and can have fields (state) and the interface can't have any of that.
+- Interfaces are used to define common functionality that multiple classes should implement, while a parent class is used to provide a common implementation that can be shared among multiple classes.
+- In summary, a parent class is used for inheritance and implementation sharing, while an interface is used for polymorphism and contract definition.
